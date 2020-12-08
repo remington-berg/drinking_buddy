@@ -21,4 +21,18 @@ class Api::RestaurantsController < ApplicationController
       render json: { errors: @restaurants.errors.full_messages }, status: :bad_request
     end
   end
+
+  def update
+    input = params["id"]
+    @restaurants = Restaurant.find_by(id: input)
+    @restaurants.name = params[:name] || @restaurants.name
+    @restaurants.address = params[:address] || @restaurants.address
+    @restaurants.phone_number = params[:phone_number] || @restaurants.phone_number
+
+    if @restaurants.save
+      render "show.json.jb"
+    else
+      render json: { errors: @restaurants.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 end
