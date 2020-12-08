@@ -1,0 +1,5 @@
+{
+  name: restaurant.name,
+  address: restaurant.address,
+  phone_number: restaurant.phone_number,
+}
