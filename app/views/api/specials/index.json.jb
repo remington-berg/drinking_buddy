@@ -1,0 +1,3 @@
+@specials.map do |special|
+  render partial: "specials.json.jb", locals: { special: special }
+end

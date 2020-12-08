@@ -1,0 +1,6 @@
+{
+  name: special.name,
+  description: special.description,
+  day: special.day,
+  restaurant_id: special.restaurant_id,
+}
