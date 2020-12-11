@@ -1,4 +1,6 @@
 class Api::SpecialsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @specials = Special.all
     render "index.json.jb"

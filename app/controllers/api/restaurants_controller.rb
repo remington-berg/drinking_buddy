@@ -1,4 +1,6 @@
 class Api::RestaurantsController < ApplicationController
+  before_action :authenticate_admin, except: [:index, :show]
+
   def index
     @restaurants = Restaurant.all
     render "index.json.jb"
