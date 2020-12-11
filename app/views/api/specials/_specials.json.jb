@@ -3,4 +3,5 @@
   description: special.description,
   day: special.day,
   restaurant_id: special.restaurant_id,
+  restaurant: special.restaurant,
 }
