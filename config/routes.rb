@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     patch "/restaurants/:id" => "restaurants#update"
 
     get "/specials" => "specials#index"
-    get "/specials/:day" => "specials#show"
+    get "/specials/:id" => "specials#show"
     post "/specials" => "specials#create"
     patch "/specials/:id" => "specials#update"
   end

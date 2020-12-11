@@ -5,7 +5,7 @@ class Api::SpecialsController < ApplicationController
   end
 
   def show
-    @specials = Special.where(day: params[:day])
+    @specials = Special.find_by(id: params[:id])
     render "show.json.jb"
   end
 
@@ -23,18 +23,18 @@ class Api::SpecialsController < ApplicationController
     end
   end
 
-  # def update
-  #   input = params["id"]
-  #   @specials = Special.find_by(id: input)
-  #   @specials.name = params[:name] || @specials.name
-  #   @specials.description = params[:description] || @specials.description
-  #   @specials.day = params[:day] || @specials.day
-  #   @specials.restaurant_id = params[:restaurant_id] || @specials.restaurant_id
+  def update
+    input = params["id"]
+    @specials = Special.find_by(id: input)
+    @specials.name = params[:name] || @specials.name
+    @specials.description = params[:description] || @specials.description
+    @specials.day = params[:day] || @specials.day
+    @specials.restaurant_id = params[:restaurant_id] || @specials.restaurant_id
 
-  #   if @specials.save
-  #     render "show.json.jb"
-  #   else
-  #     render json: { errors: @specials.errors.full_messages }, status: :unprocessable_entity
-  #   end
-  # end
+    if @specials.save
+      render "show.json.jb"
+    else
+      render json: { errors: @specials.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
 end

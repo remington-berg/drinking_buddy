@@ -1,5 +1,5 @@
-# render partial: "specials.json.jb", locals: { special: @specials }
+render partial: "specials.json.jb", locals: { special: @specials }
 
-@specials.map do |special|
-  render partial: "specials.json.jb", locals: { special: special }
-end
+# @specials.map do |special|
+#   render partial: "specials.json.jb", locals: { special: special }
+# end
