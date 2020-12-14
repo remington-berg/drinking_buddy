@@ -3,6 +3,7 @@ class Special < ApplicationRecord
   validates :name, presence: true
 
   def restaurant
-    Restaurant.find_by(id: restaurant_id)
+    @restaurant = Restaurant.find_by(id: restaurant_id)
+    return @restaurant.name
   end
 end
