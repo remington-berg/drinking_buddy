@@ -6,35 +6,34 @@ class Api::RestaurantsController < ApplicationController
     render "index.json.jb"
   end
 
-  def show
-    @restaurants = Restaurant.find_by(id: params[:id])
-    render "show.json.jb"
-  end
-
   def create
-    @restaurants = Restaurant.new(
+    @restaurant = Restaurant.new(
       name: params[:name],
       address: params[:address],
       phone_number: params[:phone_number],
     )
-    if @restaurants.save
+    if @restaurant.save
       render json: { message: "You did it!" }, status: :created
     else
-      render json: { errors: @restaurants.errors.full_messages }, status: :bad_request
+      render json: { errors: @restaurant.errors.full_messages }, status: :bad_request
     end
   end
 
-  def update
-    input = params["id"]
-    @restaurants = Restaurant.find_by(id: input)
-    @restaurants.name = params[:name] || @restaurants.name
-    @restaurants.address = params[:address] || @restaurants.address
-    @restaurants.phone_number = params[:phone_number] || @restaurants.phone_number
+  def show
+    @restaurant = Restaurant.find_by(id: params[:id])
+    render "show.json.jb"
+  end
 
-    if @restaurants.save
+  def update
+    @restaurant = Restaurant.find_by(id: params["id"])
+    @restaurant.name = params[:name] || @restaurant.name
+    @restaurant.address = params[:address] || @restaurant.address
+    @restaurant.phone_number = params[:phone_number] || @restaurant.phone_number
+
+    if @restaurant.save
       render "show.json.jb"
     else
-      render json: { errors: @restaurants.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: @restaurant.errors.full_messages }, status: :unprocessable_entity
     end
   end
 end
