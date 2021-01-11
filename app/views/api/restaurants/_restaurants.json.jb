@@ -3,4 +3,5 @@
   name: restaurant.name,
   address: restaurant.address,
   phone_number: restaurant.phone_number,
+  image_url: restaurant.image_url
 }

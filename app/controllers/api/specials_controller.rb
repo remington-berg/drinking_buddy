@@ -17,6 +17,7 @@ class Api::SpecialsController < ApplicationController
       description: params[:description],
       day: params[:day],
       restaurant_id: params[:restaurant_id],
+      image_url: params[:image_url],
     )
     if @specials.save
       render json: { message: "Good on you!" }, status: :created
@@ -32,6 +33,7 @@ class Api::SpecialsController < ApplicationController
     @specials.description = params[:description] || @specials.description
     @specials.day = params[:day] || @specials.day
     @specials.restaurant_id = params[:restaurant_id] || @specials.restaurant_id
+    @specials.image_url = params[:image_url] || @specials.image_url
 
     if @specials.save
       render "show.json.jb"

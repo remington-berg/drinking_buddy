@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_183613) do
     t.string "name"
     t.string "address"
     t.string "phone_number"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_183613) do
     t.string "description"
     t.string "day"
     t.integer "restaurant_id"
+    t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -5,6 +5,7 @@ class CreateSpecials < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :day
       t.integer :restaurant_id
+      t.string :image_url
 
       t.timestamps
     end

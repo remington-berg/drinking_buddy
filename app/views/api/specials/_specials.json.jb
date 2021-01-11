@@ -5,4 +5,5 @@
   day: special.day,
   restaurant_id: special.restaurant_id,
   restaurant: special.restaurant_name,
+  image_url: special.image_url,
 }

@@ -11,6 +11,7 @@ class Api::RestaurantsController < ApplicationController
       name: params[:name],
       address: params[:address],
       phone_number: params[:phone_number],
+      image_url: params[:image_url],
     )
     if @restaurant.save
       render json: { message: "You did it!" }, status: :created
@@ -29,6 +30,7 @@ class Api::RestaurantsController < ApplicationController
     @restaurant.name = params[:name] || @restaurant.name
     @restaurant.address = params[:address] || @restaurant.address
     @restaurant.phone_number = params[:phone_number] || @restaurant.phone_number
+    @restaurant.image_url = params[:image_url] || @restaurant.image_url
 
     if @restaurant.save
       render "show.json.jb"
