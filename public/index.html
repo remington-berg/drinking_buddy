@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="description" content="Bootstrap 4 Template"><meta name="author" content="kingstudio.ro"><link rel="icon" href="/images/favicon.png"><title>Drinking Buddy</title><link href="/css/bootstrap.min.css" rel="stylesheet"><link href="/css/style.css" rel="stylesheet"><link href="/css/animate.css" rel="stylesheet"><link href="/css/owl.carousel.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="/css/fontawesome-all.min.css" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script><link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet"><link href="/js/about.b9f2d009.js" rel="prefetch"><link href="/css/app.4e307bdf.css" rel="preload" as="style"><link href="/js/app.8aa6931d.js" rel="preload" as="script"><link href="/js/chunk-vendors.062c97de.js" rel="preload" as="script"><link href="/css/app.4e307bdf.css" rel="stylesheet"></head><body><div id="app"></div><script src="https://unpkg.com/es6-promise@4.2.4/dist/es6-promise.auto.min.js"></script><script src="https://unpkg.com/@mapbox/mapbox-sdk/umd/mapbox-sdk.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script><script src="/js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script><script src="/js/bootstrap.min.js"></script><script src="/js/preloader.js"></script><script src="/js/jquery.shuffle.min.js"></script><script src="/js/gallery.js"></script><script>$(document).ready(function(){
+    if (Modernizr.touch) {
+        // show the close overlay button
+        $(".close-overlay").removeClass("hidden");
+        // handle the adding of hover class when clicked
+        $(".img").click(function(e){
+            if (!$(this).hasClass("hover")) {
+                $(this).addClass("hover");
+            }
+        });
+        // handle the closing of the overlay
+        $(".close-overlay").click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if ($(this).closest(".img").hasClass("hover")) {
+                $(this).closest(".img").removeClass("hover");
+            }
+        });
+    } else {
+        // handle the mouseenter functionality
+        $(".img").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });
+    }
+});</script><script src="js/owl.carousel.min.js"></script><script>$('#product-slider').owlCarousel({
+    loop:false,
+    margin:10,
+    smartSpeed: 1000,
+    nav:true,
+    dots:true,
+    navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"],
+    items:1,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+})</script><script>$('#product-slider-2').owlCarousel({
+    loop:false,
+    margin:10,
+    smartSpeed: 1000,
+    nav:true,
+    dots:true,
+    navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"],
+    items:1,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+})</script><script>$('#product-slider-3').owlCarousel({
+    loop:false,
+    margin:10,
+    smartSpeed: 1000,
+    nav:true,
+    dots:true,
+    navText:["<i class='fas fa-long-arrow-alt-left'></i>","<i class='fas fa-long-arrow-alt-right'></i>"],
+    items:1,
+    animateIn: 'fadeIn',
+    animateOut: 'fadeOut'
+})</script><script>$('#clients-carousel').owlCarousel({
+    loop:true,
+    margin:100,
+    dots: false,
+    autoplay:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:4
+        }
+    }
+})</script><script src="/js/chunk-vendors.062c97de.js"></script><script src="/js/app.8aa6931d.js"></script></body></html>
