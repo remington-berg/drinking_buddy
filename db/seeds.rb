@@ -1,7 +1,7 @@
 User.create(name: "Remington", email: "remington@example.com", user_name: "remingtonnberg", password: "password", admin: true)
 
-Restaurant.create(name: "Avenue Tavern", address: "2916 N Broadway Ave, Chicago, Il", phone_number: "7739757000", image_url: "https://media.timeout.com/images/100909221/750/422/image.jpg")
-Restaurant.create(name: "Hoyt's", address: "75 E Upper Wacker Drive , Chicago, Il", phone_number: "7735555555", image_url: "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/11062346_890537604321113_6679980655604978373_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=e3f864&_nc_ohc=rhcrpIglTbcAX8y3xmp&_nc_ht=scontent-ort2-1.xx&oh=56002080e9643c65faa6950d8955125a&oe=607F90F4")
+Restaurant.create(name: "Avenue Tavern", address: "2916 N Broadway Ave, Chicago, Il", phone_number: "7739757000", image_url: "https://lh3.googleusercontent.com/proxy/PQQRThs2f893VgyzvqoaPdvoQzpB64Pp2MXyhaPvSKAsrHlWFY7A56Y-5SiTO-Ku2lY0bWxmuFW6i5Lu2wFlfnHVsX27mGYvAJSCM_QbGrJ3Zn3CBMXHwpkNO_sZ")
+Restaurant.create(name: "Hoyt's", address: "75 E Upper Wacker Drive , Chicago, Il", phone_number: "7735555555", image_url: "https://media-cdn.tripadvisor.com/media/photo-s/0c/bd/ec/82/american-breakfast.jpg")
 Restaurant.create(name: "Emerald Loop", address: "216 N Wabash Ave, Chicago, Il", phone_number: "5551234567", image_url: "https://www.totalhappyhour.com/preview/500-450/content/files/mod.happyhour/c5d34fb867c044abbe629c47e5170251.jpg")
 Restaurant.create(name: "Tavern at the Park", address: "130 E Randolph Street, Chicago, Il", phone_number: "3125520070", image_url: "https://jnswire.s3.amazonaws.com/jns-media/40/2c/90372/tavern-at-the-park.jpg")
 
